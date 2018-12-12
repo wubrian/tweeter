@@ -23,3 +23,85 @@
 .errorCounter {
   color: red;
 }
+
+ #tweet-list {
+  margin-top: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: silver;
+  padding: 10px;
+}
+
+.tweet {
+  margin-top: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: silver;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.tweet:hover{
+  opacity: 1;
+}
+
+.tweet:hover .action-items {
+  visibility: visible;
+}
+
+.tweet header {
+  background-color: lightgray;
+}
+.tweet header img {
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: silver;
+  height:50px;
+  width: 50px
+
+}
+.tweet header h2 {
+  display: inline-block;
+}
+
+.tweet header h3 {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+}
+
+.tweet p{
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.tweet footer{
+  border-top: 2px solid lightgreen;
+  display: inline-block;
+  width: 100%;
+}
+
+.tweet footer p {
+  float: left;
+  display: inline;
+  margin: 0 auto;
+}
+
+.tweet .action-items{
+  height: 32px;
+  float: right;
+  visibility: hidden;
+}
+
+.tweet .action-item{
+  height: 2em;
+  width: 2em;
+}
+
+
+
+
+
+
