@@ -51,10 +51,14 @@ $('#document').ready(function(e){
       var content = $('#tweetcontent').val();
       console.log(content.length);
       if(content.length === 0){
-        alert("Please Enter!");
+        $(".alert-danger").slideUp();
+        $(".alert-warning").slideDown();
       } else if(content.length > 140){
-        alert("Exceeds Max Msg!");
+        $(".alert-warning").slideUp();
+        $(".alert-danger").slideDown();
       }else {
+        $(".alert-danger").slideUp();
+        $(".alert-warning").slideUp();
         $.ajax('/tweets/', {
           type: 'POST',
           data: data
