@@ -49,9 +49,6 @@ const data = [
 $('#document').ready(function(e){
 
   function renderTweets(tweets) {
-    // loops through tweets
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
       tweets.forEach(tweet => {
         $tweet = createTweetElement(tweet);
         $('#tweet-list').append($tweet);
@@ -85,5 +82,29 @@ $('#document').ready(function(e){
     return $tweet;
   }
 
-  renderTweets(data);
+  function loadTweets(){
+    $.ajax('/tweets', {
+      method: 'GET'
+    })
+    .then(function (tweets) {
+      console.log(tweets);
+      renderTweets(tweets);
+    });
+  }
+
+  function postTweet() {
+    var $send = $('#submit-tweet');
+    $send.submit(function (event) {
+      event.preventDefault();
+      var data = $(this).serialize()
+      $.ajax('/tweets', {
+        type: 'POST',
+        data: data
+      })
+      .then(function (newTweet) {
+        loadTweets();
+      });
+    });
+  };
+  postTweet();
 });
