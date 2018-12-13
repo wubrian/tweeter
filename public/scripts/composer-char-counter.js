@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   //clicking on the which button
   $("button").on('click', function(event) {
-    $("section").toggle("slow");
+    $(".new-tweet").toggle("slow");
     $("textarea").focus();
   });
 }); //closes the document.ready function

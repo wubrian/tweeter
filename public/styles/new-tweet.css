@@ -19,9 +19,11 @@
 
 .new-tweet .alert-warning{
   display: none;
+  background-color: yellow;
 }
 .new-tweet .alert-danger{
   display: none;
+  background-color: red;
 }
 
 .counter {
@@ -38,7 +40,6 @@
   border-style: solid;
   border-color: silver;
   padding: 10px;
-  display: none;
 }
 
 .tweet {

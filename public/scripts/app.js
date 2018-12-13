@@ -64,11 +64,11 @@ $('#document').ready(function(e){
           data: data
         })
         .then(function () {
-          loadTweets();
         });
       }
     });
   };
+  loadTweets();
 
   postTweet();
 });
