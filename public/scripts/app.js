@@ -1,10 +1,11 @@
 $('#document').ready(function(e){
 
   function renderTweets(tweets) {
-      tweets.forEach(tweet => {
-        $tweet = createTweetElement(tweet);
-        $('#tweet-list').append($tweet);
-      })
+    $('#tweet-list').empty();
+    tweets.forEach(tweet => {
+      $tweet = createTweetElement(tweet);
+      $('#tweet-list').append($tweet);
+    })
   }
 
   function createTweetElement(tweet) {
@@ -25,9 +26,11 @@ $('#document').ready(function(e){
     const $body = $("<p>").text(tweet.content.text);
     $tweet.append($body);
 
+
     //footer
     const $footer = $("<footer>");
-    const $footerp = $("<footer> > <p>").text(tweet.created_at);
+    const date = moment(tweet.created_at).fromNow();
+    const $footerp = $("<footer> > <p>").text(date);
     $footer.append($footerp);
     $tweet.append($footer);
 
@@ -64,6 +67,9 @@ $('#document').ready(function(e){
           data: data
         })
         .then(function () {
+          loadTweets();
+          $("#submit-tweet").get(0).reset();
+          $(".counter").text("140");
         });
       }
     });
