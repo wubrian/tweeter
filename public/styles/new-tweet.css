@@ -61,6 +61,7 @@
 
 .tweet header {
   background-color: lightgray;
+  height: 70px;
 }
 .tweet header img {
   float: left;
@@ -74,6 +75,7 @@
 }
 .tweet header h2 {
   display: inline-block;
+  font-size: 20px;
 }
 
 .tweet header h3 {
@@ -91,12 +93,7 @@
   border-top: 2px solid lightgreen;
   display: inline-block;
   width: 100%;
-}
-
-.tweet footer p {
-  float: left;
-  display: inline;
-  margin: 0 auto;
+  font-size: 10px;
 }
 
 .tweet .action-items{
