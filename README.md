@@ -4,6 +4,12 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML
 
 This repository is the finished code for the tweeter project at Lighthouse Lab Inc (LHL): it is build upon with my HTML, CSS, JS, jQuery and AJAX front-end skills, and with my Node, Express and MongoDB back-end skills.
 
+## Final Product
+!["Display Compose Tweet when Compose btn clicked"](https://github.com/wubrian/tweeter/blob/master/docs/compose.png?raw=true)
+!["Error message when text is empty"](https://github.com/wubrian/tweeter/blob/master/docs/empty-tweet.png?raw=true)
+!["Error message when text has 140 more characters"](https://github.com/wubrian/tweeter/blob/master/docs/exceeds-tweet.png?raw=true)
+!["when no compose tweet after compose btn clicked/first render the tweeter page"](https://github.com/wubrian/tweeter/blob/master/docs/no-compose.png?raw=true)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
