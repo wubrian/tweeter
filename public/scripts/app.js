@@ -30,8 +30,14 @@ $('#document').ready(function(e){
     //footer
     const $footer = $("<footer>");
     const date = moment(tweet.created_at).fromNow();
-    const $footerp = $("<footer> > <p>").text(date);
+    const $flag = $("<i>").addClass("icon fas fa-flag");
+    const $retweet = $("<i>").addClass("icon fas fa-retweet");
+    const $heart = $("<i>").addClass("icon fas fa-heart");
+    const $footerp = $("<p>").text(date);
     $footer.append($footerp);
+    $footer.append($flag);
+    $footer.append($retweet);
+    $footer.append($heart);
     $tweet.append($footer);
 
     return $tweet;

@@ -91,9 +91,13 @@
 
 .tweet footer{
   border-top: 2px solid lightgreen;
-  display: inline-block;
   width: 100%;
   font-size: 10px;
+  height: 30px;
+}
+
+.tweet footer p{
+  float: left;
 }
 
 .tweet .action-items{
@@ -105,6 +109,18 @@
 .tweet .action-item{
   height: 2em;
   width: 2em;
+}
+
+.tweet footer .icon {
+  float: right;
+  margin-top: 10px;
+  visibility: hidden;
+  color: #0abab5;
+  font-size: 15px;
+}
+
+.tweet:hover footer .icon {
+  visibility: visible;
 }
 
 
