@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // --- our code goes here ---
   //count characters in the textarea and display on bottom
   $("textarea").on('keyup', function(event) {
     const textareaContent = $(this).val();

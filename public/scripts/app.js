@@ -1,5 +1,5 @@
 $('#document').ready(function(e){
-
+  // add a tweet that has been create into tweets and render
   function renderTweets(tweets) {
     $('#tweet-list').empty();
     tweets.forEach(tweet => {
@@ -8,10 +8,10 @@ $('#document').ready(function(e){
     })
   }
 
+  // create a tweet section jquery instead of html
   function createTweetElement(tweet) {
     const $tweet = $("<article>").addClass("tweet");
     const $header = $("<header>");
-
     //header
     const $headerimg = $('<img>');
     $headerimg.attr('src',tweet.user.avatars.small );
@@ -21,12 +21,9 @@ $('#document').ready(function(e){
     $header.append($headerh2);
     $header.append($headerh3);
     $tweet.append($header);
-
     //body
     const $body = $("<p>").text(tweet.content.text);
     $tweet.append($body);
-
-
     //footer
     const $footer = $("<footer>");
     const date = moment(tweet.created_at).fromNow();
@@ -39,11 +36,11 @@ $('#document').ready(function(e){
     $footer.append($retweet);
     $footer.append($heart);
     $tweet.append($footer);
-
     return $tweet;
   }
 
-  function loadTweets(){
+  //get all the tweets and then render
+  function loadTweets() {
     $.ajax('/tweets/', {
       type: 'GET'
     })
@@ -52,6 +49,7 @@ $('#document').ready(function(e){
     });
   }
 
+  //post a new tweet
   function postTweet() {
     var $send = $('#submit-tweet');
     $send.submit(function (event) {
@@ -59,13 +57,13 @@ $('#document').ready(function(e){
       var data = $(this).serialize();
       var content = $('#tweetcontent').val();
       console.log(content.length);
-      if(content.length === 0){
+      if(content.length === 0) {
         $(".alert-danger").slideUp();
         $(".alert-warning").slideDown();
       } else if(content.length > 140){
         $(".alert-warning").slideUp();
         $(".alert-danger").slideDown();
-      }else {
+      } else {
         $(".alert-danger").slideUp();
         $(".alert-warning").slideUp();
         $.ajax('/tweets/', {
@@ -81,6 +79,5 @@ $('#document').ready(function(e){
     });
   };
   loadTweets();
-
   postTweet();
-});
+}); //closes the document.ready function

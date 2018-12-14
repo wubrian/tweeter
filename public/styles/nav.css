@@ -6,10 +6,10 @@
   width: 100%; /* Full width */
   height: 80px; /* 80 pixels in height */
   color: #e8fdff; /* default font color */
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0px;
-  padding-bottom: : 0px;
+  padding-left: 2em; /* change left padding */
+  padding-right: 2em; /* change right padding */
+  padding-top: 0px; /* change top padding */
+  padding-bottom: 0px; /* change bottom padding */
   z-index: 1;
 }
 
